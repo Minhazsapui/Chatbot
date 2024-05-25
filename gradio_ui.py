@@ -22,7 +22,7 @@ def generative_chat_history(chatbot: list[list[str, str]]) -> list[list[str, str
         )
         formatted_chatbot.append(
             {
-                "role": "modol",
+                "role": "model",
                 "parts": [ch[1]]
             }
         )
@@ -30,7 +30,7 @@ def generative_chat_history(chatbot: list[list[str, str]]) -> list[list[str, str
 
 
 def handle_user_query(msg: str, chatbot: list[list[str, str]]) -> list[list[str, str]]:
-    chatbot+= [(msg, None)]
+    chatbot += [(msg, None)]
     return '', chatbot
 
 
